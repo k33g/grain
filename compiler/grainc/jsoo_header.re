@@ -1,20 +1,24 @@
-let needs_c =
-  List.exists(
-    root => {
-      switch (String.index_opt(root, ':')) {
-      | Some(1) =>
-        if (root.[0] != 'C') {
-          true;
-        } else {
-          false;
-        }
-      | _ => false
-      }
-    },
-    Js_of_ocaml.Sys_js.mount_point(),
-  );
+let is_c_drive = path =>
+  try(path.[0] == 'C') {
+  | Invalid_argument(_) => false
+  };
 
-if (needs_c) {
+let is_windows_root = path =>
+  try(path.[1] == ':') {
+  | Invalid_argument(_) => false
+  };
+
+let has_non_c_windows_root = root =>
+  if (is_windows_root(root) && !is_c_drive(root)) {
+    true;
+  } else {
+    false;
+  };
+
+let needs_c_mount =
+  List.exists(has_non_c_windows_root, Js_of_ocaml.Sys_js.mount_point());
+
+if (needs_c_mount) {
   Js_of_ocaml.Sys_js.mount(~path="C:/", (~prefix: _, ~path: _) => None);
 };
 
