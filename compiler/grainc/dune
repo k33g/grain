@@ -25,12 +25,9 @@
  (enabled_if
   (= %{profile} jsoo))
  (name grainc_js)
- (public_name grainc_js)
- (package grainc)
  (modules grainc_js)
  ; exe is only here so dune-build-info works
- (modes exe js)
+ (modes js)
  (libraries grain grain_diagnostics binaryen.js dune-build-info js_of_ocaml)
  (js_of_ocaml
-  (flags --no-sourcemap --no-extern-fs --quiet)
-  (javascript_files runtime.js jsoo_hacks.js)))
+  (flags --no-sourcemap --no-extern-fs --quiet)))

@@ -1,6 +1,21 @@
-// This code is used to refill the mock stdin with the actual 0 file descriptor
-Js_of_ocaml.Sys_js.set_channel_filler(stdin, () => {
-  Js_of_ocaml.Js.to_string(
-    Js_of_ocaml.Js.Unsafe.js_expr("require('fs').readFileSync(0, 'utf8')"),
-  )
-});
+let needs_c =
+  List.exists(
+    root => {
+      switch (String.index_opt(root, ':')) {
+      | Some(1) =>
+        if (root.[0] != 'C') {
+          true;
+        } else {
+          false;
+        }
+      | _ => false
+      }
+    },
+    Js_of_ocaml.Sys_js.mount_point(),
+  );
+
+if (needs_c) {
+  Js_of_ocaml.Sys_js.mount(~path="C:/", (~prefix: _, ~path: _) => None);
+};
+
+List.iter(print_endline, Js_of_ocaml.Sys_js.mount_point());
