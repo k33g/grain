@@ -21,5 +21,3 @@ let needs_c_mount =
 if (needs_c_mount) {
   Js_of_ocaml.Sys_js.mount(~path="C:/", (~prefix: _, ~path: _) => None);
 };
-
-List.iter(print_endline, Js_of_ocaml.Sys_js.mount_point());
