@@ -19,5 +19,7 @@ let needs_c_mount =
   List.exists(has_non_c_windows_root, Js_of_ocaml.Sys_js.mount_point());
 
 if (needs_c_mount) {
-  Js_of_ocaml.Sys_js.mount(~path="C:/", (~prefix: _, ~path: _) => None);
+  Js_of_ocaml.Sys_js.(
+    mount(~path="C:/", ~fs_type=Node, (~prefix: _, ~path: _) => None)
+  );
 };

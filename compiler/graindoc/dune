@@ -39,5 +39,4 @@
  (libraries cmdliner grain grain_diagnostics grain_utils graindoc.docblock
    binaryen.js dune-build-info js_of_ocaml)
  (js_of_ocaml
-  (flags --no-sourcemap --no-extern-fs --quiet)
-  (javascript_files jsoo_hacks.js)))
+  (flags --no-sourcemap --no-extern-fs --quiet)))
