@@ -55,9 +55,9 @@
     "@opam/fs": "facebookexperimental/reason-native:fs.opam#a33f1528a6dd86c67f365e226c81312733181c87",
     "@opam/utf8": "facebookexperimental/reason-native:utf8.opam#a33f1528a6dd86c67f365e226c81312733181c87",
     "@grain/binaryen.ml": "grain-lang/binaryen.ml:package.json#df59a34f3e716f36524652e337f84121fa544118",
-    "@opam/js_of_ocaml": "phated/js_of_ocaml:js_of_ocaml.opam#637406ade779aae1748cc73469c96840c2e3723a",
-    "@opam/js_of_ocaml-ppx": "phated/js_of_ocaml:js_of_ocaml-ppx.opam#637406ade779aae1748cc73469c96840c2e3723a",
-    "@opam/js_of_ocaml-compiler": "phated/js_of_ocaml:js_of_ocaml-compiler.opam#637406ade779aae1748cc73469c96840c2e3723a"
+    "@opam/js_of_ocaml": "phated/js_of_ocaml:js_of_ocaml.opam#80de7bee9e625c663d148dd3d0cc2fbc16b7ca81",
+    "@opam/js_of_ocaml-ppx": "phated/js_of_ocaml:js_of_ocaml-ppx.opam#80de7bee9e625c663d148dd3d0cc2fbc16b7ca81",
+    "@opam/js_of_ocaml-compiler": "phated/js_of_ocaml:js_of_ocaml-compiler.opam#80de7bee9e625c663d148dd3d0cc2fbc16b7ca81"
   },
   "installConfig": {
     "pnp": false
