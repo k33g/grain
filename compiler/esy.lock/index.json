@@ -1,5 +1,5 @@
 {
-  "checksum": "8a980a0bcee2322a7ba142d093e588f9",
+  "checksum": "26182fef4412c35e6f08dfbab4dd7f29",
   "root": "@grain/compiler@link-dev:./esy.json",
   "node": {
     "ocaml@4.11.0@d41d8cd9": {
@@ -1448,7 +1448,6 @@
         "@opam/ppx_sexp_conv@opam:v0.14.3@8f42b1ac",
         "@opam/ppx_deriving_yojson@opam:3.6.1@faf11a7c",
         "@opam/ocamlgraph@opam:2.0.0@929b9eba",
-        "@opam/js_of_ocaml@github:phated/js_of_ocaml:js_of_ocaml.opam#80de7bee9e625c663d148dd3d0cc2fbc16b7ca81@d41d8cd9",
         "@opam/grain_dypgen@opam:0.2@4b32567c",
         "@opam/fs@github:facebookexperimental/reason-native:fs.opam#a33f1528a6dd86c67f365e226c81312733181c87@d41d8cd9",
         "@opam/fp@github:facebookexperimental/reason-native:fp.opam#a33f1528a6dd86c67f365e226c81312733181c87@d41d8cd9",

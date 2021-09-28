@@ -13,7 +13,8 @@
 
 (rule
  (target grainc_js.re)
- (action (copy %{dep:grainc.re} %{target})))
+ (action
+  (copy %{dep:grainc.re} %{target})))
 
 (executable
  (enabled_if
@@ -24,6 +25,6 @@
  (modules grainc_js)
  ; exe is only here so dune-build-info works
  (modes exe js)
- (libraries grain grain_diagnostics binaryen.js dune-build-info js_of_ocaml)
+ (libraries grain grain_diagnostics binaryen.js dune-build-info)
  (js_of_ocaml
   (flags --no-sourcemap --no-extern-fs --quiet)))

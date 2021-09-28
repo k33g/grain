@@ -19,7 +19,8 @@
 
 (rule
  (target grainformat_js.re)
- (action (copy %{dep:grainformat.re} %{target})))
+ (action
+  (copy %{dep:grainformat.re} %{target})))
 
 (executable
  (enabled_if
@@ -31,6 +32,6 @@
  ; exe is only here so dune-build-info works
  (modes exe js)
  (libraries cmdliner grain grain_diagnostics grain_utils grain_parsing
-   grainformat.reformat binaryen.js dune-build-info js_of_ocaml)
+   grainformat.reformat binaryen.js dune-build-info)
  (js_of_ocaml
   (flags --no-sourcemap --no-extern-fs --quiet)))
